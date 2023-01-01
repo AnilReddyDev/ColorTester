@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Color Viewer</title>
+</head>
+
+<body>
+    <main id="main">
+        <div id="para">
+            <p>Enter Any HexCode or ColorName To Change Color</p>
+        </div>
+        <div id="textfields">
+            <input type="text" placeholder="Enter any color for bg" onfocus="this.value=''" class="colorinput" id="inputbg">
+            <input type="text" placeholder="Enter any color for text" onfocus="this.value=''" class="colorinput" id="inputpara">
+            <button onclick="myFunction()" class="btn" value="submit">Submit</button>
+        </div>
+    </main>
+</body>
+
+<script>
+    function myFunction() {
+        let bg = document.getElementById("inputbg").value;
+        let pg = document.getElementById("inputpara").value;
+        let x = document.getElementById("main");
+        let y = document.getElementById("para");
+        x.style.backgroundColor = bg;
+        y.style.color = pg;
+    }
+</script>
+
+</html>
